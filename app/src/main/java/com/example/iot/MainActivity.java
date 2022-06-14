@@ -126,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         try {
 
             token = mqttAndroidClient.connect();
@@ -153,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
     private void publishSuccess() {
         switchCompatButton.setOnClickListener(v -> {
             if (switchCompatButton.isChecked()) {
-                JSONObject jsonParam = new JSONObject();
                 publishMessage("1");
                 Log.d("checkpublish", "publishsuccess");
             } else {
@@ -227,7 +225,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (MqttException e) {
             e.printStackTrace();
         }
-
     }
 
 

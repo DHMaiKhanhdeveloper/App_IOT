@@ -5,10 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/tree12"
+    android:backgroundTint="#6000000F"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textAlignment="center"
@@ -18,10 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAlignment="center"
-            android:text="Smart Farming"
+            android:text="SFarming"
             android:textStyle="bold"
-            android:textColor="@color/cardview_dark_background"
-            android:textSize="30dp"/>
+            android:textColor="@color/white"
+            android:textSize="40dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -46,10 +50,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/design_button2"
+
                     app:tint="#fff"
                     android:layout_marginTop="4dp"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
+
                     android:layout_marginBottom="4dp" />
                 <TextView
                     android:id="@+id/temperature"
@@ -61,6 +67,7 @@
                     android:gravity="center"
                     android:textSize="19dp"
                     android:text="Nhiệt độ"
+
                     android:textColor="#000" />
 
                 <TextView
@@ -70,9 +77,9 @@
                     android:layout_below="@+id/temperature"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:text="50oC"
+                    android:text="50°C"
                     android:textColor="#000"
-                    android:textSize="36sp"
+                    android:textSize="32sp"
                     android:textStyle="bold" />
 
 
@@ -118,7 +125,7 @@
                     android:layout_marginTop="10dp"
                     android:text="100%"
                     android:textColor="#000"
-                    android:textSize="36sp"
+                    android:textSize="32sp"
                     android:textStyle="bold" />
             </RelativeLayout>
         </RelativeLayout>
@@ -173,7 +180,7 @@
                     android:layout_marginTop="10dp"
                     android:text="50 Lux"
                     android:textColor="#000"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
 
 
@@ -221,7 +228,7 @@
                     android:layout_marginTop="10dp"
                     android:text="50%"
                     android:textColor="#000"
-                    android:textSize="36sp"
+                    android:textSize="32sp"
                     android:textStyle="bold" />
             </RelativeLayout>
         </RelativeLayout>
@@ -237,11 +244,11 @@
             android:layout_width="250dp"
             android:layout_height="100dp"
             android:id="@+id/switchButton"
-            android:textSize="25sp"
+            android:textSize="100sp"
             android:textStyle="bold"
             android:layout_marginLeft="40dp"
-            android:textOff="OFF"
-            android:textOn="ON"
+            android:textOff="TẮT"
+            android:textOn="BẬT"
             android:gravity="center"
             android:layout_marginTop="10dp"
             android:thumb="@drawable/sw_thumb"
@@ -253,6 +260,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_weight="1"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:baselineAligned="false">
         <RelativeLayout
@@ -274,23 +282,30 @@
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_launcher_time_foreground"
                     android:gravity="center"
                     android:onClick="popTimePicker1"
-                    android:text="Thời gian mở"
+                    android:paddingLeft="-10dp"
+                    android:paddingRight="13dp"
+                    android:text="BẬT"
                     android:textColor="@color/white"
-                    android:textSize="20dp">
+                    android:textSize="24dp">
 
                 </TextView>
+
                 <TextView
+                    android:drawableStart="@drawable/ic_launcher_time_foreground"
                     android:id="@+id/tv_endTime"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:gravity="center"
                     android:layout_alignParentRight="true"
-                    android:text="Thời gian tắt"
-                    android:textSize="20dp"
+                    android:gravity="center"
                     android:onClick="popTimePicker2"
-                    android:textColor="@color/white">
+                    android:text="TẮT"
+                    android:paddingLeft="-18dp"
+                    android:paddingRight="14dp"
+                    android:textColor="@color/white"
+                    android:textSize="24dp">
 
                 </TextView>
             </RelativeLayout>
@@ -316,10 +331,10 @@
                 android:id="@+id/tv_link_grafana"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Link Grafana"
+                android:text="Đi đến Dashboard Grafana"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textSize="25dp"
                 android:gravity="center"/>
 
         </RelativeLayout>
